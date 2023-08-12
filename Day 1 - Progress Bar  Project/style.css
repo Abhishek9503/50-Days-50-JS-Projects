@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caprasimo', cursive;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    position: relative;
+    height: 55px;
+    max-width: 300px;
+    width: 100%;
+    background: #7d2ae8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:  all 0.5s ease;
+    overflow: hidden;
+    user-select: none;
+
+}
+
+.button::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background:rgba(0, 0, 0, 0.2);
+    border-radius:  6px;
+    transition:  all 6s ease;
+
+}
+
+.button.progress::before{
+   animation: progress 6s ease-in-out forwards;
+
+
+}
+
+@keyframes progress {
+    0%{
+        left: -100%;
+    }
+    10%{
+        left: -97%;
+    }
+
+    20%{
+        left: -82%;
+    }
+
+   30%{
+        left: -62%;
+    }  
+
+      50%{
+        left: -38%;
+    }  
+    70%{
+        left: -10%;
+    }  
+    90%{
+        left: -5%;
+    }  
+    100%{
+        left: -0%;
+    }   
+}
+
+.button .text-icon{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .text-icon i ,
+.button .text-icon span{
+
+    position: relative;
+    object-fit: contain;
+    color: #fff;
+    font-size: 26px;
+
+}
+
+
+.button .text-icon span{
+    font-style: 20px;
+    font-weight: 400;
+  
+    margin-left: 8px;
+}
+
